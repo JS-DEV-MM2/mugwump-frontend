@@ -8,3 +8,15 @@ before_install:
 
 script:
     - docker run -e CI=true missym2/mugwump-frontend npm run test -- --coverage
+
+deploy:
+    provider: elasticbeanstalk
+    region: "us-east-1"
+    app:  "mugwump-frontend"
+    env: "MugwumpFrontend-env"
+    bucket_name: "elasticbeanstalk-us-east-1-638751097140"
+    bucket_path: "mugwump-frontend"
+    on:
+        branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
