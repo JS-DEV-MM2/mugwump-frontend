@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          This is my first feature branch for Mugwump!
+          This is my first feature branch for Mugwump; so glad I am back on this!
         </p>
         <a
           className="App-link"
